@@ -1,0 +1,257 @@
+/* Google Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* BODY  */
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* HEADER  */
+
+/* Top Bar  */
+
+.Top-bar{
+  height: 2.5rem;
+  background-color: #eb4034;
+  color: white;
+}
+
+.Top-bar h1{
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 542px){
+  .Top-bar h1{
+    font-size: 1rem;
+    line-height: 2.5rem;
+}
+
+}
+
+/* Middle Bar  */
+
+@media only screen and (max-width: 770px){
+  .logo{
+    text-align: center;
+    
+  }
+
+}
+.middle-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control:focus{
+  border-color: #eb4034;
+  box-shadow: none;
+  outline: 0 none;
+}
+.fa-search{
+  font-size: 1.5rem;
+}
+
+.btn-default:focus{
+  border-color: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.btn-default:hover{
+  color: #eb4034;
+  transform: scale(1.3);
+}
+
+.cart{
+  font-size: 1.5rem;
+  transition: all 0.5s ease
+}
+
+.cart:hover{
+  color: #eb4034;
+}
+
+.icon-button__badge {
+  position: absolute;
+  top: -9px;
+  right: 37px;
+  width: 21px;
+  height: 21px;
+  background: #f10;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+
+
+@media only screen and (max-width: 1199px){
+  
+  .icon-button__badge {
+    right: 24px;
+   
+  }
+
+}
+
+@media only screen and (max-width: 991px){
+  
+  .icon-button__badge {
+    right: 5px;
+   
+  }
+
+}
+
+@media only screen and (max-width: 767px){
+  
+  .icon-button__badge {
+    right: 38px;
+   
+  }
+
+}
+
+@media only screen and (max-width: 510px){
+  
+  .icon-button__badge {
+    right: 29px;
+   
+  }
+
+}
+
+@media only screen and (max-width: 470px){
+  
+  .icon-button__badge {
+    right: 24px;
+   
+  }
+
+}
+
+@media only screen and (max-width: 450px){
+  
+  .icon-button__badge {
+    right: 20px;
+   
+  }
+
+  
+
+}
+
+@media only screen and (max-width: 410px){
+  
+  .icon-button__badge {
+    right: 15px;
+   
+  }
+
+}
+
+@media only screen and (max-width: 350px){
+  
+  .icon-button__badge {
+    right: 10px;
+   
+  }
+}
+
+@media only screen and (max-width: 330px){
+  
+  .icon-button__badge {
+    right: 5px;
+   
+  }
+}
+
+
+
+/* NAVBAR  */
+
+.navbar-custom .navbar-nav .active  .nav-link{
+  color: #eb4034;
+}
+
+.bg-custom{
+  border-bottom:solid 1px #eb4034;
+}
+
+.navbar-icons{
+  padding: 0px 5px 0px 5px;
+  font-size: 1.5rem;
+}
+
+.mr-auto .fb i:hover{
+  color: rgb(0, 81, 255);
+}
+
+.mr-auto .ig i:hover{
+  color: rgb(243, 72, 214);
+}
+
+.mr-auto .tt i:hover{
+  color: rgb(61, 123, 255);
+}
+.custom-color{
+  color: black;
+}
+
+.navbar-custom a{
+  color: black;
+}
+
+.nav-link:hover{
+  color:#eb4034
+}
+
+.navbar-toggler-icon {
+background-image: url(https://cdn3.iconfinder.com/data/icons/neu-interface/24/interface_2_hamburger_menu_menu_justify_writing-512.png);}
+
+.mx-navbar{
+  margin-left: auto !important;
+}
+
+/* Columns */
+div.dropdown-multicol2{
+  width: 50em;
+}
+div.dropdown-multicol2>div.dropdown-col{
+  display:inline-block;
+  font-size: 15px;
+}
+
+.dropdown-menu{
+  margin: 0.625rem 0 0;
+}
+
+@media only screen and (max-width: 991px){
+  
+ .div.dropdown-multicol2 > div.dropdown-col{
+    display: none;
+  }
+  div.dropdown-multicol2{
+    width: 15em;
+
+  }
+
+  div.dropdown-multicol2>div.dropdown-col{
+    display:inline-block;
+    font-size: 10px;
+  }
+  
+  .dropdown-menu{
+    margin: 0.625rem 0 0;
+    margin: auto;
+    text-align: center;
+  }
+}
