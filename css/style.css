@@ -82,7 +82,7 @@
   right: 37px;
   width: 21px;
   height: 21px;
-  background: #f10;
+  background: #eb2a2a;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -223,7 +223,7 @@ background-image: url(https://cdn3.iconfinder.com/data/icons/neu-interface/24/in
 
 /* Columns */
 div.dropdown-multicol2{
-  width: 50em;
+  width: 30em;
 }
 div.dropdown-multicol2>div.dropdown-col{
   display:inline-block;
@@ -240,7 +240,7 @@ div.dropdown-multicol2>div.dropdown-col{
     display: none;
   }
   div.dropdown-multicol2{
-    width: 15em;
+    width: 10em;
 
   }
 
@@ -255,3 +255,76 @@ div.dropdown-multicol2>div.dropdown-col{
     text-align: center;
   }
 }
+
+
+/* MAIN  */
+
+/* Slider  */
+
+.slider{
+  margin-top: 1%;
+}
+
+.carousel-inner{
+  width: 90%;
+  margin: auto;
+
+} 
+
+
+@media only screen and (max-width:1200px){
+  .carousel-inner{
+    width: 100%;
+    margin: auto;
+  
+  } 
+}
+
+
+/* Services Section */
+.services{
+  margin-top: 2%;
+}
+.services-content .service-item .image-service {
+  background-color: #fff;
+  width: 70px;
+  border: 2px solid #e5e5e5;
+  float: left;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.services-content .service-item .info-service {
+  margin-left: 84px;
+  padding-top: 24px;
+}
+
+.services-content .service-item .info-service h3 {
+  margin: 0 0 4px;
+  padding: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #282828;
+}
+
+.img-services {
+  vertical-align: middle;
+  border-style: none;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.service-item{
+  margin: 1rem 0 0 0 ;
+  
+}
+
+.xd {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
