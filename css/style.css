@@ -32,9 +32,9 @@
 
 /* Middle Bar  */
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 768px) {
     .logo {
-        text-align: center;
+        display: flex;
     }
 }
 
