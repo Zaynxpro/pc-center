@@ -7,43 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- CSS  -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Font Awesome  -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>PC-Center</title>
+    <!-- Swiper CSS  -->
+    <link rel="stylesheet" href="css/swiper.bundle.min.css" />
+
+        <!-- CSS  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <title>PC-Centre</title>
 </head>
 
 <body>
 
-    <Header>
+    <header>
 
         <!-- Top Bar Start  -->
-        <section class="Top-bar text-center">
+        <section class="Top-bar">
             <div>
-                <H1>Get 30% Off on your First Order</H1>
+                <H1 class="text-center">Get 30% Off on your First Order</H1>
             </div>
         </section>
         <!-- Top Bar End  -->
 
-
         <!-- Middle Bar Start  -->
-        <Section>
+        <Section class="middle-bar">
             <div class="container">
                 <div class="row middle-bar">
 
-                    <div class="col-md-2 logo col-sm-12">
-                        <img src="img/Logo/Centre.png" alt="" height="100px">
+                    <div class="col-md-2 logo-3 col-sm-12">
+                        <img src="img/Logo/PC.png" alt="" height="120px">
                     </div>
 
-                    <div class="col-md-9 Search-group col-sm-10 col-10">
+                    <div class="col-md-8 Search-group col-sm-10 col-10">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for products">
                             <span class="input-group-btn">
@@ -52,10 +54,9 @@
                         </div>
                     </div>
 
-                    <div class="col-md-1 col-sm-2 col-2">
-                        <i class="fas fa-shopping-cart cart " data-toggle="tooltip" data-placement="bottom"
-                            title="You have no items in your shopping cart."></i>
-                        <span class="icon-button__badge">0</span>
+                    <div class="col-md-2 col-sm-2 col-2">
+                        <i class="fas fa-shopping-cart cart banner-icons" data-toggle="tooltip" data-placement="bottom"
+                            title="You have no items in your Shopping Cart."></i>
                     </div>
 
                 </div>
@@ -63,7 +64,7 @@
         </Section>
         <!-- Middle Bar End  -->
 
-        <!-- Navbar Start  -->
+        <!-- Navbar Starts  -->
         <section>
             <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
                 <div class="container">
@@ -87,36 +88,32 @@
                             <li class="nav-item">
                                 <!-- COLUMNS -->
                                 <div class="dropdown">
-                                    <a class="nav-link dropdown-toggle" type="button"
-                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Products
-                                </a>
+                                    </a>
                                     <div class="dropdown-menu dropdown-multicol2" aria-labelledby="dropdownMenuButton">
                                         <div class="dropdown-col">
                                             <a class="dropdown-item" href="#">Laptops</a>
-                                            <a class="dropdown-item" href="#">Storage</a>
-                                            <a class="dropdown-item" href="#">Printers</a>
-                                        </div>
-                                        <div class="dropdown-col">
-                                            <a class="dropdown-item" href="#">Headphones</a>
-                                            <a class="dropdown-item" href="#">Keyboards/Mouse</a>
-                                            <a class="dropdown-item" href="#">Lcd/Led Monitors</a>
-                                        </div>
-                                        <div class="dropdown-col">
                                             <a class="dropdown-item" href="#">Motherboards</a>
                                             <a class="dropdown-item" href="#">Processors</a>
+                                        </div>
+                                        <div class="dropdown-col">
+                                            <a class="dropdown-item" href="#">Storage</a>
+                                            <a class="dropdown-item" href="#">Keyboards/Mouse</a>
                                             <a class="dropdown-item" href="#">Ram</a>
                                         </div>
-                                        
+                                        <div class="dropdown-col">
+                                            <a class="dropdown-item" href="#">Modems</a>
+                                            <a class="dropdown-item" href="#">Printers</a>
+                                            <a class="dropdown-item" href="#">Scanners</a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </li>
-                           <li class="nav-item">
-                                <a class="nav-link" href="#">Game Store</a>
-                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mobile and Tablets</a>
+                                <a class="nav-link" href="#">Help and FAQs</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">About Us</a>
@@ -133,106 +130,481 @@
 
             </nav>
         </section>
+        <!-- Navbar Ends  -->
 
-        <!-- Navbar End  -->
-    </Header>
+    </header>
 
-
-    <Main>
-        <!-- slider start  -->
-        <section class="slider">
-         <div class="container">
-            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img src="img/Slider/slider-2.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/Slider/slider-4.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/Slider/slider-3.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-              </div>
-         </div>
-        </section>
-        <!-- slider end  -->
-
-        <!-- 2nd Section Start -->
-        <section class="services">
-            <div class="container">
-                <div class="services-content">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6 xd">
-                            <div class="service-item">
-                                <div class="image-service">
-                                    <img src="img/Services/icon-1.png" class="img-services" alt="Icon" width="70" height="70">
-                                </div>
-                                
-                                <div class="info-service">
-                                    <h3>Free Shipping</h3>
-                                </div>
-                            </div>
+    <main>
+        <!-- Carousel Start -->
+        <section class="carousel-slider">
+            <div class="container-slider container">
+                <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slider/1.png" class="d-block w-100" alt="...">
                         </div>
-                        
-                        <div class="col-lg-3 col-sm-6 xd">
-                            <div class="service-item">
-                                <div class="image-service">
-                                    <img src="img/Services/icon-2.png" class="img-services" alt="Icon" width="70" height="70">
-                                </div>
-                                
-                                <div class="info-service">
-                                    <h3>Money Guarantee</h3>
-                                </div>
-                            </div>
+                        <div class="carousel-item">
+                            <img src="img/slider/2.png" class="d-block w-100" alt="...">
                         </div>
-                        
-                        <div class="col-lg-3 col-sm-6 xd">
-                            <div class="service-item">
-                                <div class="image-service">
-                                    <img src="img/Services/icon-3.png" class="img-services" alt="Icon" width="70" height="70">
-                                </div>
-                                
-                                <div class="info-service">
-                                    <h3>Safe Shopping</h3>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-3 col-sm-6 xd">
-                            <div class="service-item">
-                                <div class="image-service">
-                                    <img src="img/Services/icon-4.png" class="img-services" alt="Icon" width="70" height="70">
-                                </div>
-                                
-                                <div class="info-service">
-                                    <h3>Online Support</h3>
-                                </div>
-                            </div>
+                        <div class="carousel-item">
+                            <img src="img/slider/3.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- 2nd Section End  -->
-    </Main>
+        <!-- Carousel End  -->
+
+        <!-- Store Text STARTS  -->
+        <section>
+            <div class="container">
+                <p class="store-text text-center">Store Timings: 11:00 am to 7:00 pm. Fridays and Sundays Off. Due to
+                    safety policies as a result of Covid 19, we are
+                    experiencing processing and shipping delays.</p>
+            </div>
+        </section>
+        <!-- Store Text END -->
+
+        <hr width="80%" class="py-2">
+
+        <!-- Featured Products Start -->
+        <div class="container">
+            <Section class="main-heading">
+                <h1 class="text-center"><span>.</span>
+                    Featured Products
+                    <span>.</span>
+                </h1>
+            </Section>
+            <section>
+                <!-- Slider main container -->
+                <div class="swiper featured-products">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/Featured/1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lenovo ThinkBook 15 G2 Laptop AMD Ryzen 5 .</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/Featured/2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">HP M24F 23.8" FHD IPS Monitor | AMD FreeSync</h5>
+                                    <hr width="50%">
+                                    <div class="card-text">450$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/Featured/3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lenovo Legion 5 Gaming Laptop AMD Ryzen 7</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">400$</strike>&nbsp;350$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/Featured/4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">ASTRO Gaming A40 Headset + MixAmp Pro TR</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">200$</strike>&nbsp;100$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/Featured/5.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Palit GeForce RTX 3090 GamingPro Graphics Card</h5>
+                                    <hr width="50%">
+                                    <div class="card-text">850$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            
+                </div>
+            </section>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- Featured Products End -->
+
+        <!-- Featured Products Start -->
+     <div class="container">
+            <Section class="main-heading">
+                <h1 class="text-center"><span>.</span>
+                    New Arrivals
+                    <span>.</span>
+                </h1>
+            </Section>
+            <section>
+                <!-- Slider main container -->
+                <div class="swiper featured-products">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">AOC CQ27G2 27" Super Curved Frameless Monior</h5>
+                                    <hr width="50%">
+                                    <div class="card-text">450$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/3.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Samsung Portable SSD T7 1TB (Gray) Premium</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">400$</strike>&nbsp;350$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">HP Color Laser MFP 179FNW Printer Strandard Edition</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">200$</strike>&nbsp;100$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/5.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">ADATA XPG GAMMIX D30 DDR4 Memory Module 8GB 3600MHz</h5>
+                                    <hr width="50%">
+                                    <div class="card-text">850$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            
+                </div>
+            </section>
+     </div>
+        <br>
+        <br>
+        <br>
+        <!-- Featured Products End -->
+
+        <!-- Best Selling Products Start -->
+        <div class="container">
+            <Section class="main-heading">
+                <h1 class="text-center"><span>.</span>
+                   Best Selling Products
+                    <span>.</span>
+                </h1>
+            </Section>
+            <br>
+            
+            <section>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Exclusive Deals/gaming-pc-01-CL500-main-400.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Exclusive Deals/gaming-pc-01-CL500-main-400.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Exclusive Deals/gaming-pc-01-CL500-main-400.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <!-- PRODUCT CARD -->
+                            <div class="card deal-cards">
+                                <img src="img/Exclusive Deals/gaming-pc-01-CL500-main-400.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- Best Selling Products END  -->
+
+        <!-- BRANDS START -->
+        <section>
+            <div class="container">
+                <Section class="main-heading">
+                    <h1 class="text-center"><span>.</span>
+                        PARTNERS
+                        <span>.</span>
+                    </h1>
+                </Section>
+                <section class="customer-logos slider">
+                    <div class="slide"><img src="https://i2.wp.com/blog.viral-launch.com/wp-content/uploads/2018/08/2000px-Apple_logo_black.svg_.png?fit=2000%2C2000&ssl=1">
+                    </div>
+                    <div class="slide"><img src="https://prague.makerfaire.com/wp-content/uploads/sites/205/2019/06/asuslogo.png"></div>
+                    <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dell_logo_2016.svg/2048px-Dell_logo_2016.svg.png"></div>
+                    <div class="slide"><img src="https://independent.ng/wp-content/uploads/2018/08/Samsung-Logo.jpg"></div>
+                    <div class="slide"><img src="https://www.dlfmallofindia.com/wp-content/uploads/2020/10/new-lenovo-logo.png">
+                    </div>
+                    <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/1024px-HP_logo_2012.svg.png"></div>
+                </section>
+            </div>
+        </section>
+        <br>
+        <br>
 
 
-    <Footer>
+    </main>
 
-    </Footer>
+    
+    <footer class="footer-distributed">
+    
+        <div class="footer-left">
+    
+            <h3>PC&nbsp;Centre</h3>
+    
+            <p class="footer-links">
+                <a href="#">Home</a>
+                ·
+                <a href="#">Faq</a>
+                ·
+                <a href="#">About Us</a>
+                ·
+                <a href="#">Contact Us</a>
+            </p>
+    
+            <p class="footer-company-name">PC-Centre &copy; 2021</p>
+        </div>
+    
+        <div class="footer-center">
+    
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>ABC Street</span>Karachi, Pakistan</p>
+            </div>
+    
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 555 123456</p>
+            </div>
+    
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="#">contact@pccentre.com</a></p>
+            </div>
+    
+        </div>
+    
+        <div class="footer-right">
+    
+            <p class="footer-company-about">
+                <span>About US</span>
+                Welcome to PC-Centre. Online Computer store in Pakistan. Buy Electronic Products at best prices in
+                Pakistan.</p>
+    
+            <div class="footer-icons">
+    
+                <a href="#"><i class="fab fa-facebook f"></i></a>
+                <a href="#"><i class="fab fa-twitter t"></i></a>
+                <a href="#"><i class="fab fa-instagram i"></i></a>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
 
 
 
-    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
 
+    <!-- jQuery and Bootstrap Bundle -->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Slick Carousel js  -->
+    <script src="js/slick.js"></script>
+
+    <!-- JS  -->
+    <script src="js/min.js"></script>
 </body>
 
 </html>
