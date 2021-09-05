@@ -12,14 +12,18 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!-- Swiper CSS  -->
-    <link rel="stylesheet" href="css/swiper.bundle.min.css" />
+    <link rel="stylesheet" href="css/swiper.bundle.min.css"/>
 
-        <!-- CSS  -->
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS  -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modal.css">
 
     <title>PC-Centre</title>
 </head>
@@ -83,7 +87,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-navbar text-center">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <!-- COLUMNS -->
@@ -94,35 +98,35 @@
                                     </a>
                                     <div class="dropdown-menu dropdown-multicol2" aria-labelledby="dropdownMenuButton">
                                         <div class="dropdown-col">
-                                            <a class="dropdown-item" href="#">Laptops</a>
-                                            <a class="dropdown-item" href="#">Motherboards</a>
-                                            <a class="dropdown-item" href="#">Processors</a>
+                                            <a class="dropdown-item" href="laptops.html">Laptops</a>
+                                            <a class="dropdown-item" href="motherboards.html">Motherboards</a>
+                                            <a class="dropdown-item" href="processors.html">Processors</a>
                                         </div>
                                         <div class="dropdown-col">
-                                            <a class="dropdown-item" href="#">Storage</a>
-                                            <a class="dropdown-item" href="#">Keyboards/Mouse</a>
-                                            <a class="dropdown-item" href="#">Ram</a>
+                                            <a class="dropdown-item" href="storage.html">Storage</a>
+                                            <a class="dropdown-item" href="keyboard.html">Keyboards/Mouse</a>
+                                            <a class="dropdown-item" href="ram.html">Ram</a>
                                         </div>
                                         <div class="dropdown-col">
-                                            <a class="dropdown-item" href="#">Modems</a>
-                                            <a class="dropdown-item" href="#">Printers</a>
-                                            <a class="dropdown-item" href="#">Scanners</a>
+                                            <a class="dropdown-item" href="modems.html">Modems</a>
+                                            <a class="dropdown-item" href="printers.html">Printers</a>
+                                            <a class="dropdown-item" href="psu.html">Psu</a>
                                         </div>
 
                                     </div>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Help and FAQs</a>
+                                <a class="nav-link" href="Faq.html">FAQs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
+                                <a class="nav-link" href="policies.html">Policies</a>
                             </li>
                         </ul>
 
                         <ul class="navbar-nav ml-auto text-center">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
+                                <a class="nav-link" href="about.html">About PC-Centre</a>
                             </li>
                         </ul>
                     </div>
@@ -157,7 +161,7 @@
 
         <!-- Store Text STARTS  -->
         <section>
-            <div class="container">
+            <div class="container" data-aos="fade-down">
                 <p class="store-text text-center">Store Timings: 11:00 am to 7:00 pm. Fridays and Sundays Off. Due to
                     safety policies as a result of Covid 19, we are
                     experiencing processing and shipping delays.</p>
@@ -186,11 +190,13 @@
                             <div class="card deal-cards">
                                 <img src="img/Products/Featured/1.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Lenovo ThinkBook 15 G2 Laptop AMD Ryzen 5 .</h5>
+                                    <h5 class="card-title">Lenovo ThinkBook 15 G2 Laptop AMD Ryzen 5</h5>
                                     <hr width="50%">
                                     <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal"
+                                        data-target="#product-detail"
+                                        onclick='product("img/Products/Featured/1.jpg","Lenovo ThinkBook 15 G2 Laptop AMD Ryzen 5","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","250$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
@@ -204,7 +210,9 @@
                                     <hr width="50%">
                                     <div class="card-text">450$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal"
+                                        data-target="#product-detail"
+                                        onclick='product("img/Products/Featured/2.jpg","HP M24F 23.8 FHD IPS Monitor | AMD FreeSync","10240120412040","Hp","AOC 22” IPS Full HD Monitor, 75Hz Refresh rate Modern and sleek 3 side Frameless edge and Flicker-Free technology, (VGA, HDMI) Maximum Resolutions (1920x1080P) 22B2HM – Black","AOC 21.5 inch Full HD (1080P)","Modern and sleek 3 side farmless edge","Low-Blue and Flicker-Free technology","VGA & HDMI Ports Connectivity","450$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
@@ -218,7 +226,9 @@
                                     <hr width="50%">
                                     <div class="card-text"><strike class="strike-text">400$</strike>&nbsp;350$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal"
+                                        data-target="#product-detail"
+                                        onclick='product("img/Products/Featured/3.jpg","Lenovo Legion 5 Gaming Laptop AMD Ryzen 7","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","450$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
@@ -232,7 +242,9 @@
                                     <hr width="50%">
                                     <div class="card-text"><strike class="strike-text">200$</strike>&nbsp;100$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal"
+                                        data-target="#product-detail"
+                                        onclick='product("img/Products/Featured/4.jpg","ASTRO Gaming A40 Headset + MixAmp Pro TR","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","100$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
@@ -246,17 +258,18 @@
                                     <hr width="50%">
                                     <div class="card-text">850$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal"
+                                        data-target="#product-detail"
+                                        onclick='product("img/Products/Featured/5.jpg","Palit GeForce RTX 3090 GamingPro Graphics Card","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","850$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
                         </div>
-            
-                    </div>
+                     </div>
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-            
+
                 </div>
             </section>
         </div>
@@ -265,8 +278,8 @@
         <br>
         <!-- Featured Products End -->
 
-        <!-- Featured Products Start -->
-     <div class="container">
+        <!-- NEW ARRIVALS Products Start -->
+        <div class="container">
             <Section class="main-heading">
                 <h1 class="text-center"><span>.</span>
                     New Arrivals
@@ -288,7 +301,9 @@
                                     <hr width="50%">
                                     <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal"
+                                        data-target="#product-detail"
+                                        onclick='product("img/Products/ARRIVALS/1.jpg","Intel Core i9-11900K Processor | 8 CORES 16 THREADS","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","250$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
@@ -298,11 +313,12 @@
                             <div class="card deal-cards">
                                 <img src="img/Products/ARRIVALS/2.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">AOC CQ27G2 27" Super Curved Frameless Monior</h5>
+                                    <h5 class="card-title">AOC CQ27G2 27" Super Curved Frameless Monitor Premium</h5>
                                     <hr width="50%">
                                     <div class="card-text">450$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Products/ARRIVALS/2.jpg","AOC CQ27G2 27 inch Super Curved Frameless Monitor","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","250$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
@@ -312,11 +328,12 @@
                             <div class="card deal-cards">
                                 <img src="img/Products/ARRIVALS/3.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Samsung Portable SSD T7 1TB (Gray) Premium</h5>
+                                    <h5 class="card-title">Samsung Portable SSD T7 1TB (Gray) Premium Edition </h5>
                                     <hr width="50%">
                                     <div class="card-text"><strike class="strike-text">400$</strike>&nbsp;350$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Products/ARRIVALS/3.webp","Samsung Portable SSD T7 1TB (Gray) Premium","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","250$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
@@ -326,11 +343,12 @@
                             <div class="card deal-cards">
                                 <img src="img/Products/ARRIVALS/4.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">HP Color Laser MFP 179FNW Printer Strandard Edition</h5>
+                                    <h5 class="card-title">HP Color Laser MFP 179FNW Printer Strandard Edition 2021</h5>
                                     <hr width="50%">
                                     <div class="card-text"><strike class="strike-text">200$</strike>&nbsp;100$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Products/ARRIVALS/4.jpg","HP Color Laser MFP 179FNW Printer Strandard Edition 2021","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","250$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
@@ -340,162 +358,344 @@
                             <div class="card deal-cards">
                                 <img src="img/Products/ARRIVALS/5.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">ADATA XPG GAMMIX D30 DDR4 Memory Module 8GB 3600MHz</h5>
+                                    <h5 class="card-title">ADATA XPG GAMMIX D30 DDR4 Memory Module 8GB 3600MHz 2021</h5>
                                     <hr width="50%">
                                     <div class="card-text">850$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Products/ARRIVALS/5.jpg","ADATA XPG GAMMIX D30 DDR4 Memory Module 8GB 3600MHz 2021","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","250$")'><i
                                             class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
                         </div>
-            
+
                     </div>
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-            
+
                 </div>
             </section>
-     </div>
+        </div>
         <br>
         <br>
         <br>
-        <!-- Featured Products End -->
+        <!-- NEW ARRIVALS Products End -->
 
-        <!-- Best Selling Products Start -->
-        <div class="container">
+
+
+        <!-- Products By Brand Start -->
+        <div>
             <Section class="main-heading">
                 <h1 class="text-center"><span>.</span>
-                   Best Selling Products
+                    Product By Brands
                     <span>.</span>
                 </h1>
             </Section>
             <br>
-            
+
+            <section>
+                <nav>
+                    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="nav-hp-tab" data-toggle="tab" href="#nav-hp" role="tab"
+                            aria-controls="nav-hp" aria-selected="true">Hp</a>
+                        <a class="nav-link" id="nav-dell-tab" data-toggle="tab" href="#nav-dell" role="tab"
+                            aria-controls="nav-dell" aria-selected="false">Dell</a>
+                        <a class="nav-link" id="nav-apple-tab" data-toggle="tab" href="#nav-apple" role="tab"
+                            aria-controls="nav-apple" aria-selected="false">Apple</a>
+
+                    </div>
+                </nav>
+                <hr width="25%">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active container" id="nav-hp" role="tabpanel"
+                        aria-labelledby="nav-hp-tab">
+                       <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                                <!-- PRODUCT CARD -->
+                                <div class="card cards-hover">
+                                    <img src="img/Laptops/hp/1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hp-Laptop-01</h5>
+                                        <hr width="50%">
+                                        <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                        <br>
+                                        <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                            onclick='product("img/Laptops/hp/1.jpg","Hp-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                                class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                                <!-- PRODUCT CARD -->
+                                <div class="card cards-hover">
+                                    <img src="img/Laptops/hp/2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hp-Laptop-02</h5>
+                                        <hr width="50%">
+                                        <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                        <br>
+                                        <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                            onclick='product("img/Laptops/hp/2.jpg","Hp-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                                class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                                <!-- PRODUCT CARD -->
+                                <div class="card cards-hover">
+                                    <img src="img/Laptops/hp/3.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hp-Laptop-03</h5>
+                                        <hr width="50%">
+                                        <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                        <br>
+                                        <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                            onclick='product("img/Laptops/hp/3.jpg","Hp-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                                class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                                <!-- PRODUCT CARD -->
+                                <div class="card cards-hover">
+                                    <img src="img/Laptops/hp/4.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hp-Laptop-04</h5>
+                                        <hr width="50%">
+                                        <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                        <br>
+                                        <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                            onclick='product("img/Laptops/hp/4.jpg","Hp-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                                class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="tab-pane fade container" id="nav-dell" role="tabpanel" aria-labelledby="nav-dell-tab">
+                      <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                                <!-- PRODUCT CARD -->
+                                <div class="card cards-hover">
+                                    <img src="img/Laptops/dell/1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dell-Laptop-01</h5>
+                                        <hr width="50%">
+                                        <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                        <br>
+                                        <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                            onclick='product("img/Laptops/dell/1.jpg","Dell-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                                class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                                <!-- PRODUCT CARD -->
+                                <div class="card cards-hover">
+                                    <img src="img/Laptops/dell/2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dell-Laptop-02</h5>
+                                        <hr width="50%">
+                                        <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                        <br>
+                                        <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                            onclick='product("img/Laptops/dell/2.jpg","Dell-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                                class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                                <!-- PRODUCT CARD -->
+                                <div class="card cards-hover">
+                                    <img src="img/Laptops/dell/3.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dell-Laptop-03</h5>
+                                        <hr width="50%">
+                                        <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                        <br>
+                                        <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                            onclick='product("img/Laptops/dell/3.jpg","Dell-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                                class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                                <!-- PRODUCT CARD -->
+                                <div class="card cards-hover">
+                                    <img src="img/Laptops/dell/4.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dell-Laptop-04</h5>
+                                        <hr width="50%">
+                                        <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                        <br>
+                                        <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                            onclick='product("img/Laptops/dell/4.jpg","Dell-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                                class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade container" id="nav-apple" role="tabpanel" aria-labelledby="nav-apple-tab">
+                       <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                            <!-- PRODUCT CARD -->
+                            <div class="card cards-hover">
+                                <img src="img/Laptops/apple/1.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apple-Laptop-01</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Laptops/apple/1.webp","Apple-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                            <!-- PRODUCT CARD -->
+                            <div class="card cards-hover">
+                                <img src="img/Laptops/apple/2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apple-Laptop-02</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Laptops/apple/2.jpg","Apple-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                            <!-- PRODUCT CARD -->
+                            <div class="card cards-hover">
+                                <img src="img/Laptops/apple/3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apple-Laptop-03</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Laptops/apple/3.jpg","Apple-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-aos="zoom-in-up">
+                            <!-- PRODUCT CARD -->
+                            <div class="card cards-hover">
+                                <img src="img/Laptops/apple/4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apple-Laptop-04</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Laptops/apple/4.jpg","Apple-Laptop-01","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- Prodcuts By Brand End -->
+
+        <!-- Exclusive Sales on Products -->
+        <div class="container">
+            <Section class="main-heading">
+                <h1 class="text-center"><span>.</span>
+                    Exclusive Sale
+                    <span>.</span>
+                </h1>
+            </Section>
+            <br>
+
             <section>
                 <div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12"  data-aos="zoom-in">
                             <!-- PRODUCT CARD -->
-                            <div class="card deal-cards">
-                                <img src="img/Exclusive Deals/gaming-pc-01-CL500-main-400.webp" class="card-img-top" alt="...">
+                            <div class="card cards-hover">
+                                <img src="img/Exclusive Deals/1.webp" class="card-img-top"
+                                    alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
                                     <hr width="50%">
-                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
+                                    <div class="card-text"><strike class="strike-text">800$</strike>&nbsp;550$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
-                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
-                                        Details</button>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Exclusive Deals/1.webp","Intel Core i9-11900K Processor | 8 CORES 16 THREADS","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12"  data-aos="zoom-in">
                             <!-- PRODUCT CARD -->
-                            <div class="card deal-cards">
-                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
+                        <div class="card cards-hover">
+                            <img src="img/Exclusive Deals/2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Palit GeForce RTX 3080 GamingPro Graphics Card 12gb</h5>
+                                <hr width="50%">
+                                <div class="card-text"><strike class="strike-text">600$</strike>&nbsp;450$</div>
+                                <br>
+                                <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                    onclick='product("img/Exclusive Deals/2.jpg","Palit GeForce RTX 3090 GamingPro Graphics Card","10240120412040","Lenovo","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","850$")'><i
+                                        class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12"  data-aos="zoom-in">
+                            <!-- PRODUCT CARD -->
+                            <div class="card cards-hover">
+                                <img src="img/Exclusive Deals/3.webp" class="card-img-top"
+                                    alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
+                                    <h5 class="card-title">Intel Core i7-11900K Processor | 6 CORES 12 THREADS</h5>
+                                    <hr width="50%">
+                                    <div class="card-text"><strike class="strike-text">600$</strike>&nbsp;450$</div>
+                                    <br>
+                                    <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                        onclick='product("img/Exclusive Deals/3.webp","Intel Core i7-11900K Processor | 6 CORES 12 THREADS","10240120412040","Intel","Get reliable performance on the go with the Gaming Pc. With long life, you can stay social, productive, and connected.","Windows 10 Home™","16GB [8GB x 2] DDR4-3200MHz RGB","GeForce RTX 3060 Ti - 8GB GDDR6 (VR-Ready)","650 Watt - 80 PLUS Gold Certified","550$")'><i
+                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12"  data-aos="zoom-in">
+                            <!-- PRODUCT CARD -->
+                            <div class="card cards-hover">
+                                <img src="img/Exclusive Deals/4.webp" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Asus Gaming Laptop AMD Ryzen 7- | 8 CORES 16 THREADS</h5>
                                     <hr width="50%">
                                     <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
                                     <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
-                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
-                                        Details</button>
+                                <button href="#" class="btn btn-primary mx-auto d-flex" data-toggle="modal" data-target="#product-detail"
+                                    onclick='product("img/Products/Featured/3.jpg","Asus Gaming Laptop AMD Ryzen 7","10240120412040","Asus","Get reliable performance on the go with the HP 14-DK1005NIA Laptop. With long battery life, you can stay social, productive, and connected.","AMD Athlon™ Silver 3050U | AMD Integrated SoC","4 GB DDR4-2400 SDRAM | 1 TB 5400 rpm SATA HDD","AMD Radeon™ Graphics","14 inch HD Display","450$")'><i
+                                        class="fas fa-link link-font"></i>&nbsp;&nbsp;View Details</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                            <!-- PRODUCT CARD -->
-                            <div class="card deal-cards">
-                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
-                                    <hr width="50%">
-                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
-                                    <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
-                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
-                                        Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                            <!-- PRODUCT CARD -->
-                            <div class="card deal-cards">
-                                <img src="img/Exclusive Deals/gaming-pc-01-CL500-main-400.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
-                                    <hr width="50%">
-                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
-                                    <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
-                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
-                                        Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                            <!-- PRODUCT CARD -->
-                            <div class="card deal-cards">
-                                <img src="img/Exclusive Deals/gaming-pc-01-CL500-main-400.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
-                                    <hr width="50%">
-                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
-                                    <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
-                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
-                                        Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                            <!-- PRODUCT CARD -->
-                            <div class="card deal-cards">
-                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
-                                    <hr width="50%">
-                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
-                                    <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
-                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
-                                        Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                            <!-- PRODUCT CARD -->
-                            <div class="card deal-cards">
-                                <img src="img/Products/ARRIVALS/1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
-                                    <hr width="50%">
-                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
-                                    <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
-                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
-                                        Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                            <!-- PRODUCT CARD -->
-                            <div class="card deal-cards">
-                                <img src="img/Exclusive Deals/gaming-pc-01-CL500-main-400.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Intel Core i9-11900K Processor | 8 CORES 16 THREADS</h5>
-                                    <hr width="50%">
-                                    <div class="card-text"><strike class="strike-text">300$</strike>&nbsp;250$</div>
-                                    <br>
-                                    <button href="#" class="btn btn-primary mx-auto d-flex"><i
-                                            class="fas fa-link link-font"></i>&nbsp;&nbsp;View
-                                        Details</button>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -503,7 +703,7 @@
         <br>
         <br>
         <br>
-        <!-- Best Selling Products END  -->
+        <!-- Exclusive Sales on Products  -->
 
         <!-- BRANDS START -->
         <section>
@@ -515,14 +715,22 @@
                     </h1>
                 </Section>
                 <section class="customer-logos slider">
-                    <div class="slide"><img src="https://i2.wp.com/blog.viral-launch.com/wp-content/uploads/2018/08/2000px-Apple_logo_black.svg_.png?fit=2000%2C2000&ssl=1">
+                    <div class="slide"><img
+                            src="img/Brands/2000px-Apple_logo_black.svg_.webp">
                     </div>
-                    <div class="slide"><img src="https://prague.makerfaire.com/wp-content/uploads/sites/205/2019/06/asuslogo.png"></div>
-                    <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dell_logo_2016.svg/2048px-Dell_logo_2016.svg.png"></div>
-                    <div class="slide"><img src="https://independent.ng/wp-content/uploads/2018/08/Samsung-Logo.jpg"></div>
-                    <div class="slide"><img src="https://www.dlfmallofindia.com/wp-content/uploads/2020/10/new-lenovo-logo.png">
+                    <div class="slide"><img
+                            src="img/Brands/asuslogo.png"></div>
+                    <div class="slide"><img
+                            src="img/Brands/Dell_logo_2016.svg.webp">
                     </div>
-                    <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/1024px-HP_logo_2012.svg.png"></div>
+                    <div class="slide"><img src="img/Brands/Samsung-Logo.jpg">
+                    </div>
+                    <div class="slide"><img
+                            src="img/Brands/new-lenovo-logo.png">
+                    </div>
+                    <div class="slide"><img
+                            src="img/Brands/hp.webp">
+                    </div>
                 </section>
             </div>
         </section>
@@ -532,63 +740,137 @@
 
     </main>
 
-    
+
     <footer class="footer-distributed">
-    
+
         <div class="footer-left">
-    
+
             <h3>PC&nbsp;Centre</h3>
-    
+
             <p class="footer-links">
                 <a href="#">Home</a>
                 ·
-                <a href="#">Faq</a>
+                <a href="#">Faqs</a>
                 ·
                 <a href="#">About Us</a>
                 ·
                 <a href="#">Contact Us</a>
             </p>
-    
+
             <p class="footer-company-name">PC-Centre &copy; 2021</p>
         </div>
-    
+
         <div class="footer-center">
-    
+
             <div>
                 <i class="fa fa-map-marker"></i>
                 <p><span>ABC Street</span>Karachi, Pakistan</p>
             </div>
-    
+
             <div>
                 <i class="fa fa-phone"></i>
                 <p>+1 555 123456</p>
             </div>
-    
+
             <div>
                 <i class="fa fa-envelope"></i>
                 <p><a href="#">contact@pccentre.com</a></p>
             </div>
-    
+
         </div>
-    
+
         <div class="footer-right">
-    
+
             <p class="footer-company-about">
                 <span>About US</span>
                 Welcome to PC-Centre. Online Computer store in Pakistan. Buy Electronic Products at best prices in
-                Pakistan.</p>
-    
+                Pakistan.
+            </p>
+
             <div class="footer-icons">
-    
+
                 <a href="#"><i class="fab fa-facebook f"></i></a>
                 <a href="#"><i class="fab fa-twitter t"></i></a>
                 <a href="#"><i class="fab fa-instagram i"></i></a>
-    
+
             </div>
-    
+
         </div>
-    
+
     </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="product-detail" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="product-detailLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="product-detailLabel">Product Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close ">
+                        <span aria-hidden="true ">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-md-4 d-flex justify-content-center col-sm-12">
+                            <img src="" alt="" class="img-fluid" id="product-image">
+                        </div>
+
+                        <div class="col-md-5 col-sm-12">
+                            <h1 id="product-title"></h1>
+                            <div>
+                                <div class="rating">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="review-line">Be the First To Write a Review</span>
+                            </div>
+                            <div class="details">
+                                <span class="product-details">Product Code&ensp;:&ensp;</span><span
+                                    id="product-code"></span>
+                                <br>
+                                <span class="product-details">Brand&ensp;:&ensp;</span><span id="product-brand"></span>
+                                <br>
+                                <span class="product-details">Price Updated on&ensp;:&ensp;</span><span>21 August
+                                    2021</span>
+                            </div>
+                            <div>
+                                <p id="product-about"></p>
+                                <div id="product-info">
+                                    <li id="product-info1"></li>
+                                    <li id="product-info2"></li>
+                                    <li id="product-info3"></li>
+                                    <li id="product-info4"></li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 d-flex justify-content-center my-3 col-sm-12">
+                            <div class="add-cart">
+                                <span>In Stock</span>
+                                <br>
+                                <span class="text-primary">3-Years Warranty</span>
+                                <br>
+                                <span id="product-price"></span>
+                                <br>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn  add-to-cart">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -602,6 +884,12 @@
 
     <!-- Slick Carousel js  -->
     <script src="js/slick.js"></script>
+
+    <!-- AOS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- JS  -->
     <script src="js/min.js"></script>

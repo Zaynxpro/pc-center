@@ -98,6 +98,10 @@
     color: #064f88;
 }
 
+.navbar-nav .active{
+     color: #064f88;
+}
+
 .bg-custom {
     border-bottom: solid 1px #064f88;
 }
@@ -229,29 +233,41 @@ font-size: 0.3rem;
     color: #064f88;
 }
 
+
+
 /* CARD */
 
 .card{
-    overflow: hidden;
+   
     height: 400px;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px!important;
-    transition: all 0.2s ease-in-out;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+ 
 }
 .card:hover{
     cursor: pointer;
-    box-shadow: rgba(6, 54, 212, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset!important;
+  
     
+}
+.cards-hover{
+    margin: 20px 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.cards-hover:hover{
+      transform: scale(1.1);
+}
+@media only screen and (max-width: 500px){
+.cards-hover:hover{
+    cursor: pointer;
+    transform: none;
+    
+}
+
 }
 .card-img-top{
     width: 180px;
     margin: 0 auto;
-        transition: all 0.3s ease-in-out;
-}
-
-.card-img-top:hover{
-    transform: scale(1.1);
-    overflow: hidden;
 }
 
 .card-title{
@@ -327,11 +343,14 @@ font-size: 0.8rem;
 .main-heading{
     color: black;
     margin-bottom: 2%;
+    
   
 }
 
 .main-heading h1{
     font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+
 }
 .main-heading span{
     color: #064f88;
@@ -343,6 +362,8 @@ font-size: 0.8rem;
         font-size: 1.5rem;
     }
 }
+
+
 
 /* Brands   */
 
@@ -468,3 +489,33 @@ font-size: 0.8rem;
 .deal-cards{
     margin: 1rem 0;
 }
+
+
+/* PRODUCTS BY BRANDS  */
+.nav-tabs {
+    border-bottom: none
+}
+
+.nav-tabs .nav-link{
+    font-size: 1.2rem;
+    padding: 0 1.2rem;
+}
+.nav-tabs .nav-link.active {
+    color: #064f88;
+    background-color: #fff;
+    border-color: transparent;
+}
+
+.nav-tabs a{
+    color: black;
+}
+
+
+.nav-tabs a:hover{
+    color: #064f88;
+    border: none;
+}
+
+
+/* FAQ page  */
+

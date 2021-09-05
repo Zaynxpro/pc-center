@@ -58,3 +58,20 @@ $(document).ready(function () {
     });
 });
 
+
+
+// MODAL
+
+function product(img, h1, number, span, p, li1, li2, li3, li4, price,) {
+    document.getElementById("product-image").src = img;
+    document.getElementById("product-title").innerHTML = h1;
+    document.getElementById("product-code").innerHTML = number;
+    document.getElementById("product-brand").innerHTML = span;
+    document.getElementById("product-about").innerHTML = p;
+    document.getElementById("product-info1").innerHTML = li1;
+    document.getElementById("product-info2").innerHTML = li2;
+    document.getElementById("product-info3").innerHTML = li3;
+    document.getElementById("product-info4").innerHTML = li4;
+    document.getElementById("product-price").innerHTML = price;
+
+}

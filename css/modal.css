@@ -1,0 +1,59 @@
+/* Google Fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* BODY  */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#product-title{
+font-size: 1.3rem;
+}
+
+.rating{
+    display: inline-block;
+    font-size: 0.7rem;
+}
+
+.rating i{
+    color: grey;
+}
+
+
+
+.product-details{
+color: grey;
+
+}
+
+.review-line{
+    padding-left: 14px;
+     font-size: 0.7rem;
+}
+
+.details{
+    padding: 10px 0px;
+    font-size: 0.8rem;
+}
+
+#product-about{
+    font-size: 0.7rem;
+}
+
+#product-info{
+    padding-left: 15px;
+margin-top: -10px;
+font-size: 0.6rem;
+}
+
+.add-to-cart{
+    color: #fff;
+    background-color:#eb4034;
+}
+
+.add-to-cart:hover{
+color: #fff;
+background-color: #f12718;
+}
